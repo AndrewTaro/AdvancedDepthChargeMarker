@@ -20,7 +20,6 @@
 		(var distanceToShip:number = "distanceComponent.distanceToShip * 1000" (event "evEnterFrame"))
 		(var distanceText:str = "formatFloatingPoint(distanceToShip, 1) + ' ' + tr('IDS_METER')")
 		(var distanceItemVisibility:bool = "distanceToShip < 5000")
-		(var enemyEntity:gfx = "$datahub.getPrimaryEntity(CC.vehicleInfo, depthChargeComponent.ownerID)")
 		#
 
 		(var markerIcon:str = "'icon_depth_charge' + dangerPostfix")
@@ -48,9 +47,6 @@
 		(align = "center|middle")
 	)
 	#modded
-	(element DepthChargeOwnerNameItem "enemyEntity"
-		(bind visible "altVisionEnabled")
-	)
 	(element SimpleMarkerTextItem "distanceText"
 		(bind visible "distanceItemVisibility || altVisionEnabled")
 	)
