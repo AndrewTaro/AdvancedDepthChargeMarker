@@ -1,8 +1,6 @@
 #depth_charge_marker.unbound
-(def element WorldDepthChargeMarker (_entityId:number) layout=true
+(def element WorldDepthChargeMarker (_markerEntity:gfx) layout=true
 	(scope
-		(var markerEntity:gfx = "$datahub.getEntity(_entityId)")
-
 		(event evMarkerShow)
 
 		(macro GET_MARKER_ENTITY_COMPONENT 'depthCharge')
